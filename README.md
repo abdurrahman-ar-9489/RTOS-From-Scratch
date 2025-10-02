@@ -13,18 +13,19 @@ This repository is my **step-by-step implementation of Miro Samek’s Modern Emb
 - 📚 Follow my journey: **code + diagrams + reflections** for each lesson.
 
 ## 📂 Repository Structure
-
+```
 lessons/
-lesson01_hello_world/ # Blink LEDs, first embedded program
-lesson02_startup_code/ # Startup sequence, linker script, and main()
-lesson03_interrupts/ # NVIC, ISRs, and priorities
-lesson04_race_conditions/ # Shared variables, critical sections
-lesson05_superloop/ # Cooperative multitasking and limitations
-lesson06_rtos_intro/ # Round-robin scheduling, SysTick
-lesson07_rtos_advanced/ # Preemption, tasks, queues, and semaphores
+├── lesson01_hello_world/ # Blink LEDs, first embedded program
+├── lesson02_startup_code/ # Startup sequence, linker script, and main()
+├── lesson03_interrupts/ # NVIC, ISRs, and priorities
+├── lesson04_race_conditions/ # Shared variables, critical sections
+├── lesson05_superloop/ # Cooperative multitasking and limitations
+├── lesson06_rtos_intro/ # Round-robin scheduling, SysTick
+├── lesson07_rtos_advanced/ # Preemption, tasks, queues, semaphores
 include/ # Shared headers
-docs/ # Datasheets, MCU User Guide Manual and other
+docs/ # Datasheets, MCU user guides, and other notes
 
+```
 ## 🛠️ Tools & Environment
 
 - 💻 **IDE:** Keil MicroVision  
