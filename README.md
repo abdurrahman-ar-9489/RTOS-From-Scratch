@@ -14,26 +14,23 @@ This repository is my **step-by-step implementation of Miro Samek’s Modern Emb
 
 ## 📂 Repository Structure
 
-RTOS-from-Scratch/
-│
-├── lessons/
-│ ├── lesson01_hello_world/ # 🔹 Blink LEDs, first embedded program
-│ ├── lesson02_startup_code/ # 🔹 Startup sequence, linker script, main()
-│ ├── lesson03_interrupts/ # 🔹 NVIC, ISRs, and priorities
-│ ├── lesson04_race_conditions/ # 🔹 Shared variables, critical sections
-│ ├── lesson05_superloop/ # 🔹 Cooperative multitasking
-│ ├── lesson06_rtos_intro/ # 🔹 Round-robin scheduling, SysTick
-│ └── lesson07_rtos_advanced/ # 🔹 Preemption, tasks, queues, semaphores
-├── include/ # 📂 Shared headers
-├── docs/ # 📝 Diagrams, notes, and explanations
-├── .gitignore
-├── LICENSE
-└── README.md # 📖 This main README
+lessons/
+lesson01_hello_world/ # Blink LEDs, first embedded program
+lesson02_startup_code/ # Startup sequence, linker script, and main()
+lesson03_interrupts/ # NVIC, ISRs, and priorities
+lesson04_race_conditions/ # Shared variables, critical sections
+lesson05_superloop/ # Cooperative multitasking and limitations
+lesson06_rtos_intro/ # Round-robin scheduling, SysTick
+lesson07_rtos_advanced/ # Preemption, tasks, queues, and semaphores
+include/ # Shared headers
+docs/ # Datasheets, MCU User Guide Manual and other
 
 ## 🛠️ Tools & Environment
 
-- 💻 **IDE:** Keil Microvision 
-- 🏗 **Board:**  EK-TM4C123GXL
+- 💻 **IDE:** Keil MicroVision  
+- 🏗 **Board:** EK-TM4C123GXL  
+- 📊 **Logic Analyzer:** USB Logic Analyzer 24MHz, 8 channel
+- 🛠 **Logic Analyzer Application:** Logic
 
 ## 💡 Learning Path
 
