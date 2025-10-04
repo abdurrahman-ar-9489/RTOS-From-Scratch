@@ -53,3 +53,16 @@ uint32_t *GPIODATA = (uint32_t *)0x400253FCU;
 // Turn OFF all LEDs
 *GPIODATA = 0x00U;
 
+🔦 Expected Output
+
+🟥 The Red LED (PF1) toggles ON/OFF continuously.
+
+📈 On the logic analyzer, a square waveform should be visible on PF1.
+
+<p align="center">
+  <img src="../../Images/lesson1_demo.gif" width="400" alt="LED blink demo">
+  &nbsp;&nbsp;&nbsp;
+  <img src="../../Images/lesson1_Logic_output.png" width="400" alt="Logic Analyzer Output">
+</p>
+
+
