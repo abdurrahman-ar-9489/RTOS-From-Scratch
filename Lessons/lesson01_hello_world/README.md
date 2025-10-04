@@ -52,14 +52,3 @@ uint32_t *GPIODATA = (uint32_t *)0x400253FCU;
 
 // Turn OFF all LEDs
 *GPIODATA = 0x00U;
-
-📊 Register Summary
-Register	|Address	  |Purpose                      
-RCGCGPIO	|0x400FE608	|Enables clock to GPIO ports 
-GPIODEN	  |0x4002551C	|Enables digital I/O function
-GPIODIR	  |0x40025400	|Sets direction (Input/Output)
-GPIODATA	|0x400253FC	|Reads/Writes GPIO pin states
-
-🧰 Tools & Environment
--💻 IDE: Keil µVision
--🏗 Board: EK-TM4C123GXL
