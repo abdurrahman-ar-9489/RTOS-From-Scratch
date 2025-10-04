@@ -52,3 +52,6 @@ uint32_t *GPIODATA = (uint32_t *)0x400253FCU;
 
 // Turn OFF all LEDs
 *GPIODATA = 0x00U;
+
+<img width="1165" height="892" alt="Screenshot 2025-10-03 225909" src="https://github.com/user-attachments/assets/fe88bb17-de05-4335-8cb4-72496b576da3" />
+
