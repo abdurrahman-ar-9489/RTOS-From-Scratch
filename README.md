@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="/Images/TivaCLaunchPad.png" width="800" alt="Tiva C LaunchPad Board">
+</p>
+
 # 🚀 RTOS from Scratch
 
 Welcome to **RTOS-from-Scratch** — a hands-on journey into embedded systems and real-time operating systems!  
