@@ -20,12 +20,8 @@ This repository is my **step-by-step implementation of Miro Samek’s Modern Emb
 ```
 lessons/
 ├── lesson01_hello_world/ # Blink LEDs, first embedded program
-├── lesson02_startup_code/ # Startup sequence, linker script, and main()
-├── lesson03_interrupts/ # NVIC, ISRs, and priorities
-├── lesson04_race_conditions/ # Shared variables, critical sections
-├── lesson05_superloop/ # Cooperative multitasking and limitations
-├── lesson06_rtos_intro/ # Round-robin scheduling, SysTick
-├── lesson07_rtos_advanced/ # Preemption, tasks, queues, semaphores
+├── lesson02/ # Pitfalls of RMW and Power of Atomic write
+├── lesson03/ # APB vs AHB — Speeding Up Our GPIO Access
 include/ # Shared headers
 docs/ # Datasheets, MCU user guides, and other notes
 
@@ -40,12 +36,8 @@ docs/ # Datasheets, MCU user guides, and other notes
 ## 💡 Learning Path
 
 - **Lesson 1:** 👋 Hello World of Embedded Systems — LED toggle  
-- **Lesson 2:** ⚙ Startup Code — Boot sequence & linker scripts  
-- **Lesson 3:** 🛎 Interrupts — NVIC, ISR mechanics, priorities  
-- **Lesson 4:** ⚠ Race Conditions — Shared variables, critical sections  
-- **Lesson 5:** 🔄 Superloop Architecture - Foreground and Background Architecture  
-- **Lesson 6:** ⏱ RTOS Basics — Round-robin scheduling, SysTick  
-- **Lesson 7:** 🏁 Advanced RTOS — Preemption, tasks, queues, semaphores
+- **Lesson 2:** ⚙  Pitfalls of RMW and Power of Atomic write 
+- **Lesson 3:** 🛎  APB vs AHB — Speeding Up Our GPIO Access  
 
 ## 🔗 LinkedIn Blog / Learning Journey
 
