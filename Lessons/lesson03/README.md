@@ -47,7 +47,7 @@ Same register map as APB — so code migration is seamless.
 
 🔧 Switching from APB → AHB
 
-<p align="center">
+<p align="left">
   <img src="../../Images/GPIOHBCTL_REG_DES.png" width="400" alt="GPIOHBCTL Register description">
 </p>
 
