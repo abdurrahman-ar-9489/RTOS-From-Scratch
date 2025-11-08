@@ -1,0 +1,256 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ROM              0x00000000         0x00040000         xr
+RAM              0x20000000         0x00008000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD main.o
+LOAD delay.o
+LOAD startup_tm4c.o
+LOAD bsp.o
+LOAD system_TM4C123GH6PM.o
+                0x00000800                STACK_SIZE = 0x800
+                0x00000000                HEAP_SIZE = 0x0
+
+.isr_vector     0x00000000      0x26c
+ *(.isr_vector)
+ .isr_vector    0x00000000      0x26c startup_tm4c.o
+                0x00000000                g_pfnVectors
+                0x0000026c                . = ALIGN (0x4)
+
+.text           0x0000026c      0x578
+                0x0000026c                . = ALIGN (0x4)
+ *(.text)
+ .text          0x0000026c       0x6c main.o
+                0x0000026c                main
+ .text          0x000002d8       0x28 delay.o
+                0x000002d8                delay
+ .text          0x00000300       0xe0 startup_tm4c.o
+                0x00000300                Reset_Handler
+                0x00000350                NMI_Handler
+                0x00000368                HardFault_Handler
+                0x00000380                MemManage_Handler
+                0x00000398                BusFault_Handler
+                0x000003b0                UsageFault_Handler
+                0x000003c8                FlashCtrl_IRQHandler
+                0x000003c8                GPIOPortP7_IRQHandler
+                0x000003c8                Timer0B_IRQHandler
+                0x000003c8                I2C0_IRQHandler
+                0x000003c8                DebugMon_Handler
+                0x000003c8                WideTimer4B_IRQHandler
+                0x000003c8                PendSV_Handler
+                0x000003c8                WideTimer5B_IRQHandler
+                0x000003c8                I2C1_IRQHandler
+                0x000003c8                GPIOPortP5_IRQHandler
+                0x000003c8                PWMGen0_IRQHandler
+                0x000003c8                UART1_IRQHandler
+                0x000003c8                CAN1_IRQHandler
+                0x000003c8                Timer1B_IRQHandler
+                0x000003c8                Watchdog_IRQHandler
+                0x000003c8                GPIOPortS_IRQHandler
+                0x000003c8                GPIOPortQ7_IRQHandler
+                0x000003c8                PWM1Gen2_IRQHandler
+                0x000003c8                UART0_IRQHandler
+                0x000003c8                GPIOPortL_IRQHandler
+                0x000003c8                SSI0_IRQHandler
+                0x000003c8                GPIOPortM_IRQHandler
+                0x000003c8                FPU_IRQHandler
+                0x000003c8                QEI2_IRQHandler
+                0x000003c8                ADCSeq1_IRQHandler
+                0x000003c8                GPIOPortP0_IRQHandler
+                0x000003c8                WideTimer0B_IRQHandler
+                0x000003c8                PWMFault_IRQHandler
+                0x000003c8                WideTimer1A_IRQHandler
+                0x000003c8                PWM1Gen3_IRQHandler
+                0x000003c8                I2C4_IRQHandler
+                0x000003c8                GPIOPortQ5_IRQHandler
+                0x000003c8                PWMGen1_IRQHandler
+                0x000003c8                SSI1_IRQHandler
+                0x000003c8                I2C2_IRQHandler
+                0x000003c8                GPIOPortP4_IRQHandler
+                0x000003c8                UART5_IRQHandler
+                0x000003c8                GPIOPortC_IRQHandler
+                0x000003c8                GPIOPortK_IRQHandler
+                0x000003c8                ADCSeq2_IRQHandler
+                0x000003c8                PWMGen2_IRQHandler
+                0x000003c8                UART2_IRQHandler
+                0x000003c8                GPIOPortP3_IRQHandler
+                0x000003c8                ADC1Seq0_IRQHandler
+                0x000003c8                UART4_IRQHandler
+                0x000003c8                GPIOPortJ_IRQHandler
+                0x000003c8                Default_Handler
+                0x000003c8                WideTimer0A_IRQHandler
+                0x000003c8                Timer5A_IRQHandler
+                0x000003c8                WideTimer3B_IRQHandler
+                0x000003c8                WideTimer2B_IRQHandler
+                0x000003c8                WideTimer5A_IRQHandler
+                0x000003c8                Timer4A_IRQHandler
+                0x000003c8                QEI1_IRQHandler
+                0x000003c8                PWM1Fault_IRQHandler
+                0x000003c8                GPIOPortP6_IRQHandler
+                0x000003c8                QEI0_IRQHandler
+                0x000003c8                ADC1Seq2_IRQHandler
+                0x000003c8                ADC1Seq1_IRQHandler
+                0x000003c8                PWMGen3_IRQHandler
+                0x000003c8                GPIOPortD_IRQHandler
+                0x000003c8                USB0_IRQHandler
+                0x000003c8                I2C3_IRQHandler
+                0x000003c8                I2C5_IRQHandler
+                0x000003c8                SVC_Handler
+                0x000003c8                GPIOPortP2_IRQHandler
+                0x000003c8                GPIOPortQ4_IRQHandler
+                0x000003c8                Timer3B_IRQHandler
+                0x000003c8                Timer3A_IRQHandler
+                0x000003c8                GPIOPortA_IRQHandler
+                0x000003c8                ADC1Seq3_IRQHandler
+                0x000003c8                Timer0A_IRQHandler
+                0x000003c8                GPIOPortP1_IRQHandler
+                0x000003c8                ADCSeq0_IRQHandler
+                0x000003c8                Timer1A_IRQHandler
+                0x000003c8                GPIOPortG_IRQHandler
+                0x000003c8                GPIOPortQ3_IRQHandler
+                0x000003c8                GPIOPortQ1_IRQHandler
+                0x000003c8                Timer5B_IRQHandler
+                0x000003c8                ADCSeq3_IRQHandler
+                0x000003c8                WideTimer4A_IRQHandler
+                0x000003c8                GPIOPortE_IRQHandler
+                0x000003c8                CAN0_IRQHandler
+                0x000003c8                GPIOPortQ0_IRQHandler
+                0x000003c8                Comp0_IRQHandler
+                0x000003c8                Comp1_IRQHandler
+                0x000003c8                Comp2_IRQHandler
+                0x000003c8                GPIOPortQ6_IRQHandler
+                0x000003c8                SSI2_IRQHandler
+                0x000003c8                PWM1Gen0_IRQHandler
+                0x000003c8                GPIOPortF_IRQHandler
+                0x000003c8                UART7_IRQHandler
+                0x000003c8                UART6_IRQHandler
+                0x000003c8                WideTimer2A_IRQHandler
+                0x000003c8                GPIOPortB_IRQHandler
+                0x000003c8                WideTimer3A_IRQHandler
+                0x000003c8                CAN2_IRQHandler
+                0x000003c8                WideTimer1B_IRQHandler
+                0x000003c8                GPIOPortH_IRQHandler
+                0x000003c8                GPIOPortQ2_IRQHandler
+                0x000003c8                GPIOPortR_IRQHandler
+                0x000003c8                Timer4B_IRQHandler
+                0x000003c8                uDMAST_IRQHandler
+                0x000003c8                Timer2A_IRQHandler
+                0x000003c8                SSI3_IRQHandler
+                0x000003c8                Timer2B_IRQHandler
+                0x000003c8                uDMAError_IRQHandler
+                0x000003c8                GPIOPortN_IRQHandler
+                0x000003c8                UART3_IRQHandler
+                0x000003c8                SysCtrl_IRQHandler
+                0x000003c8                Hibernate_IRQHandler
+                0x000003c8                PWM1Gen1_IRQHandler
+ .text          0x000003e0       0x48 bsp.o
+                0x0000040c                assert_failed
+                0x0000041a                SysTick_Handler
+ .text          0x00000428      0x36c system_TM4C123GH6PM.o
+                0x000005c0                SystemCoreClockUpdate
+                0x000006d8                SystemInit
+ *(.text*)
+ *(.rodata)
+ .rodata        0x00000794        0x2 main.o
+                0x00000794                a
+                0x00000795                b
+ *fill*         0x00000796        0x2 
+ .rodata        0x00000798       0x4c startup_tm4c.o
+ *(.rodata*)
+                0x000007e4                . = ALIGN (0x4)
+                0x000007e4                _etext = .
+
+.glue_7         0x000007e4        0x0
+ .glue_7        0x000007e4        0x0 linker stubs
+
+.glue_7t        0x000007e4        0x0
+ .glue_7t       0x000007e4        0x0 linker stubs
+
+.vfp11_veneer   0x000007e4        0x0
+ .vfp11_veneer  0x000007e4        0x0 linker stubs
+
+.v4_bx          0x000007e4        0x0
+ .v4_bx         0x000007e4        0x0 linker stubs
+
+.iplt           0x000007e4        0x0
+ .iplt          0x000007e4        0x0 main.o
+
+.rel.dyn        0x000007e4        0x0
+ .rel.iplt      0x000007e4        0x0 main.o
+
+.stack          0x20000000      0x800
+                0x20000000                __stack_start__ = .
+                0x20000800                . = (. + STACK_SIZE)
+ *fill*         0x20000000      0x800 
+                0x20000800                . = ALIGN (0x4)
+                0x20000800                __stack_end__ = .
+
+.data           0x20000800        0xc load address 0x000007e4
+                0x000007e4                __data_load = LOADADDR (.data)
+                0x20000800                __data_start = .
+ *(.data)
+ .data          0x20000800        0x8 main.o
+                0x20000800                x
+                0x20000804                y
+ .data          0x20000808        0x0 delay.o
+ .data          0x20000808        0x0 startup_tm4c.o
+ .data          0x20000808        0x0 bsp.o
+ .data          0x20000808        0x4 system_TM4C123GH6PM.o
+                0x20000808                SystemCoreClock
+ *(.data*)
+                0x2000080c                . = ALIGN (0x4)
+                0x2000080c                __data_end__ = .
+                0x2000080c                _edata = __data_end__
+
+.igot.plt       0x2000080c        0x0 load address 0x000007f0
+ .igot.plt      0x2000080c        0x0 main.o
+
+.bss            0x2000080c        0x4 load address 0x000007f0
+                0x2000080c                __bss_start__ = .
+ *(.bss)
+ .bss           0x2000080c        0x4 main.o
+                0x2000080c                c
+                0x2000080e                d
+ .bss           0x20000810        0x0 delay.o
+ .bss           0x20000810        0x0 startup_tm4c.o
+ .bss           0x20000810        0x0 bsp.o
+ .bss           0x20000810        0x0 system_TM4C123GH6PM.o
+ *(.bss*)
+ *(COMMON)
+                0x20000810                . = ALIGN (0x4)
+                0x20000810                _ebss = .
+                0x20000810                __bss_end__ = .
+
+.heap           0x20000810        0x0
+                0x20000810                __heap_start__ = .
+                0x20000810                . = (. + HEAP_SIZE)
+                0x20000810                . = ALIGN (0x4)
+                0x20000810                __heap_end__ = .
+OUTPUT(final.elf elf32-littlearm)
+LOAD linker stubs
+
+.comment        0x00000000       0x49
+ .comment       0x00000000       0x49 main.o
+                                 0x4a (size before relaxing)
+ .comment       0x00000049       0x4a delay.o
+ .comment       0x00000049       0x4a startup_tm4c.o
+ .comment       0x00000049       0x4a bsp.o
+ .comment       0x00000049       0x4a system_TM4C123GH6PM.o
+
+.ARM.attributes
+                0x00000000       0x2e
+ .ARM.attributes
+                0x00000000       0x2e main.o
+ .ARM.attributes
+                0x0000002e       0x2e delay.o
+ .ARM.attributes
+                0x0000005c       0x2e startup_tm4c.o
+ .ARM.attributes
+                0x0000008a       0x2e bsp.o
+ .ARM.attributes
+                0x000000b8       0x2e system_TM4C123GH6PM.o
